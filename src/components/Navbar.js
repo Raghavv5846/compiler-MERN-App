@@ -31,7 +31,7 @@ export default function Navbar(props) {
           headers: {
             'content-type': 'application/json',
             'Content-Type': 'application/json',
-            'X-RapidAPI-Key': 'e0c49af1a6mshb090f44452c2c82p1e2340jsnf61e4a71e0b9',
+            'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
             'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
           },
           data:{language_id:langid,source_code:btoa(codeSnippets),stdin:btoa(input)}}).then((res)=>{

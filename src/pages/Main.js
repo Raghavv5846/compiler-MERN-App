@@ -45,14 +45,16 @@ export default function Main() {
            
             if(res.data.status==='success'){
               setUser(res.data.user);
-              
+              console.log(user);
             }
             else if(res.data.status==='failed'){
                 navigate(res.data.url);
             }
         })
         // Catch errors if any
-        .catch((err) => { });
+        .catch((err) => {
+            navigate('/login');
+         });
 },[loggedin])
 
   return (
